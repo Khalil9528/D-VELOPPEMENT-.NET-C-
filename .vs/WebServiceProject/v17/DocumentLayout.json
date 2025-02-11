@@ -1,0 +1,342 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\khali\\Documents\\WebServiceProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6B8E8284-5980-4AA4-AB3D-71D59879032A}|WebServiceProject\\WebServiceProject.csproj|c:\\users\\khali\\documents\\webserviceproject\\webserviceproject\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B8E8284-5980-4AA4-AB3D-71D59879032A}|WebServiceProject\\WebServiceProject.csproj|solutionrelative:webserviceproject\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B8E8284-5980-4AA4-AB3D-71D59879032A}|WebServiceProject\\WebServiceProject.csproj|c:\\users\\khali\\documents\\webserviceproject\\webserviceproject\\repository\\user.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{6B8E8284-5980-4AA4-AB3D-71D59879032A}|WebServiceProject\\WebServiceProject.csproj|solutionrelative:webserviceproject\\repository\\user.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B8E8284-5980-4AA4-AB3D-71D59879032A}|WebServiceProject\\WebServiceProject.csproj|c:\\users\\khali\\documents\\webserviceproject\\webserviceproject\\repository\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B8E8284-5980-4AA4-AB3D-71D59879032A}|WebServiceProject\\WebServiceProject.csproj|solutionrelative:webserviceproject\\repository\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B8E8284-5980-4AA4-AB3D-71D59879032A}|WebServiceProject\\WebServiceProject.csproj|c:\\users\\khali\\documents\\webserviceproject\\webserviceproject\\webserviceproject.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{6B8E8284-5980-4AA4-AB3D-71D59879032A}|WebServiceProject\\WebServiceProject.csproj|solutionrelative:webserviceproject\\webserviceproject.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B8E8284-5980-4AA4-AB3D-71D59879032A}|WebServiceProject\\WebServiceProject.csproj|c:\\users\\khali\\documents\\webserviceproject\\webserviceproject\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6B8E8284-5980-4AA4-AB3D-71D59879032A}|WebServiceProject\\WebServiceProject.csproj|solutionrelative:webserviceproject\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F6D3E6B-C4FC-40A6-A19F-E4BCD59DE340}|Serialization\\Serialization.csproj|c:\\users\\khali\\documents\\webserviceproject\\serialization\\xmlserialization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F6D3E6B-C4FC-40A6-A19F-E4BCD59DE340}|Serialization\\Serialization.csproj|solutionrelative:serialization\\xmlserialization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F6D3E6B-C4FC-40A6-A19F-E4BCD59DE340}|Serialization\\Serialization.csproj|c:\\users\\khali\\documents\\webserviceproject\\serialization\\serializerfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F6D3E6B-C4FC-40A6-A19F-E4BCD59DE340}|Serialization\\Serialization.csproj|solutionrelative:serialization\\serializerfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B8E8284-5980-4AA4-AB3D-71D59879032A}|WebServiceProject\\WebServiceProject.csproj|c:\\users\\khali\\documents\\webserviceproject\\webserviceproject\\fileencryption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B8E8284-5980-4AA4-AB3D-71D59879032A}|WebServiceProject\\WebServiceProject.csproj|solutionrelative:webserviceproject\\fileencryption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B8E8284-5980-4AA4-AB3D-71D59879032A}|WebServiceProject\\WebServiceProject.csproj|c:\\users\\khali\\documents\\webserviceproject\\webserviceproject\\khalil9||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{6B8E8284-5980-4AA4-AB3D-71D59879032A}|WebServiceProject\\WebServiceProject.csproj|solutionrelative:webserviceproject\\khalil9||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B8E8284-5980-4AA4-AB3D-71D59879032A}|WebServiceProject\\WebServiceProject.csproj|c:\\users\\khali\\documents\\webserviceproject\\webserviceproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B8E8284-5980-4AA4-AB3D-71D59879032A}|WebServiceProject\\WebServiceProject.csproj|solutionrelative:webserviceproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B8E8284-5980-4AA4-AB3D-71D59879032A}|WebServiceProject\\WebServiceProject.csproj|c:\\users\\khali\\documents\\webserviceproject\\webserviceproject\\seed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B8E8284-5980-4AA4-AB3D-71D59879032A}|WebServiceProject\\WebServiceProject.csproj|solutionrelative:webserviceproject\\seed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B8E8284-5980-4AA4-AB3D-71D59879032A}|WebServiceProject\\WebServiceProject.csproj|c:\\users\\khali\\documents\\webserviceproject\\webserviceproject\\user.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{6B8E8284-5980-4AA4-AB3D-71D59879032A}|WebServiceProject\\WebServiceProject.csproj|solutionrelative:webserviceproject\\user.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B8E8284-5980-4AA4-AB3D-71D59879032A}|WebServiceProject\\WebServiceProject.csproj|c:\\users\\khali\\documents\\webserviceproject\\webserviceproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6B8E8284-5980-4AA4-AB3D-71D59879032A}|WebServiceProject\\WebServiceProject.csproj|solutionrelative:webserviceproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B8E8284-5980-4AA4-AB3D-71D59879032A}|WebServiceProject\\WebServiceProject.csproj|c:\\users\\khali\\documents\\webserviceproject\\webserviceproject\\user.bin||{25834150-CD7E-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{6B8E8284-5980-4AA4-AB3D-71D59879032A}|WebServiceProject\\WebServiceProject.csproj|solutionrelative:webserviceproject\\user.bin||{25834150-CD7E-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B8E8284-5980-4AA4-AB3D-71D59879032A}|WebServiceProject\\WebServiceProject.csproj|c:\\users\\khali\\documents\\webserviceproject\\webserviceproject\\curve||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{6B8E8284-5980-4AA4-AB3D-71D59879032A}|WebServiceProject\\WebServiceProject.csproj|solutionrelative:webserviceproject\\curve||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B8E8284-5980-4AA4-AB3D-71D59879032A}|WebServiceProject\\WebServiceProject.csproj|c:\\users\\khali\\documents\\webserviceproject\\webserviceproject\\repository\\user.bin||{25834150-CD7E-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{6B8E8284-5980-4AA4-AB3D-71D59879032A}|WebServiceProject\\WebServiceProject.csproj|solutionrelative:webserviceproject\\repository\\user.bin||{25834150-CD7E-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B8E8284-5980-4AA4-AB3D-71D59879032A}|WebServiceProject\\WebServiceProject.csproj|c:\\users\\khali\\documents\\webserviceproject\\webserviceproject\\models\\passwordencryption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B8E8284-5980-4AA4-AB3D-71D59879032A}|WebServiceProject\\WebServiceProject.csproj|solutionrelative:webserviceproject\\models\\passwordencryption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B8E8284-5980-4AA4-AB3D-71D59879032A}|WebServiceProject\\WebServiceProject.csproj|c:\\users\\khali\\documents\\webserviceproject\\webserviceproject\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B8E8284-5980-4AA4-AB3D-71D59879032A}|WebServiceProject\\WebServiceProject.csproj|solutionrelative:webserviceproject\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B8E8284-5980-4AA4-AB3D-71D59879032A}|WebServiceProject\\WebServiceProject.csproj|c:\\users\\khali\\documents\\webserviceproject\\webserviceproject\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B8E8284-5980-4AA4-AB3D-71D59879032A}|WebServiceProject\\WebServiceProject.csproj|solutionrelative:webserviceproject\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B8E8284-5980-4AA4-AB3D-71D59879032A}|WebServiceProject\\WebServiceProject.csproj|c:\\users\\khali\\documents\\webserviceproject\\webserviceproject\\intefraces\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B8E8284-5980-4AA4-AB3D-71D59879032A}|WebServiceProject\\WebServiceProject.csproj|solutionrelative:webserviceproject\\intefraces\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BookRepository.cs",
+              "DocumentMoniker": "C:\\Users\\khali\\Documents\\WebServiceProject\\WebServiceProject\\Repository\\BookRepository.cs",
+              "RelativeDocumentMoniker": "WebServiceProject\\Repository\\BookRepository.cs",
+              "ToolTip": "C:\\Users\\khali\\Documents\\WebServiceProject\\WebServiceProject\\Repository\\BookRepository.cs",
+              "RelativeToolTip": "WebServiceProject\\Repository\\BookRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T20:31:50.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "XmlSerialization.cs",
+              "DocumentMoniker": "C:\\Users\\khali\\Documents\\WebServiceProject\\Serialization\\XmlSerialization.cs",
+              "RelativeDocumentMoniker": "Serialization\\XmlSerialization.cs",
+              "ToolTip": "C:\\Users\\khali\\Documents\\WebServiceProject\\Serialization\\XmlSerialization.cs",
+              "RelativeToolTip": "Serialization\\XmlSerialization.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T19:45:02.316Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SerializerFactory.cs",
+              "DocumentMoniker": "C:\\Users\\khali\\Documents\\WebServiceProject\\Serialization\\SerializerFactory.cs",
+              "RelativeDocumentMoniker": "Serialization\\SerializerFactory.cs",
+              "ToolTip": "C:\\Users\\khali\\Documents\\WebServiceProject\\Serialization\\SerializerFactory.cs",
+              "RelativeToolTip": "Serialization\\SerializerFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T19:45:01.198Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WebServiceProject.http",
+              "DocumentMoniker": "C:\\Users\\khali\\Documents\\WebServiceProject\\WebServiceProject\\WebServiceProject.http",
+              "RelativeDocumentMoniker": "WebServiceProject\\WebServiceProject.http",
+              "ToolTip": "C:\\Users\\khali\\Documents\\WebServiceProject\\WebServiceProject\\WebServiceProject.http",
+              "RelativeToolTip": "WebServiceProject\\WebServiceProject.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-02-06T19:43:58.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\khali\\Documents\\WebServiceProject\\WebServiceProject\\appsettings.json",
+              "RelativeDocumentMoniker": "WebServiceProject\\appsettings.json",
+              "ToolTip": "C:\\Users\\khali\\Documents\\WebServiceProject\\WebServiceProject\\appsettings.json",
+              "RelativeToolTip": "WebServiceProject\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-06T19:42:50.412Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "user.txt",
+              "DocumentMoniker": "C:\\Users\\khali\\Documents\\WebServiceProject\\WebServiceProject\\user.txt",
+              "RelativeDocumentMoniker": "WebServiceProject\\user.txt",
+              "ToolTip": "C:\\Users\\khali\\Documents\\WebServiceProject\\WebServiceProject\\user.txt",
+              "RelativeToolTip": "WebServiceProject\\user.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-02-06T19:19:34.371Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Seed.cs",
+              "DocumentMoniker": "C:\\Users\\khali\\Documents\\WebServiceProject\\WebServiceProject\\Seed.cs",
+              "RelativeDocumentMoniker": "WebServiceProject\\Seed.cs",
+              "ToolTip": "C:\\Users\\khali\\Documents\\WebServiceProject\\WebServiceProject\\Seed.cs",
+              "RelativeToolTip": "WebServiceProject\\Seed.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T19:19:33.491Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\khali\\Documents\\WebServiceProject\\WebServiceProject\\Program.cs",
+              "RelativeDocumentMoniker": "WebServiceProject\\Program.cs",
+              "ToolTip": "C:\\Users\\khali\\Documents\\WebServiceProject\\WebServiceProject\\Program.cs",
+              "RelativeToolTip": "WebServiceProject\\Program.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAFMAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T19:19:32.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "user.xml",
+              "DocumentMoniker": "C:\\Users\\khali\\Documents\\WebServiceProject\\WebServiceProject\\Repository\\user.xml",
+              "RelativeDocumentMoniker": "WebServiceProject\\Repository\\user.xml",
+              "ToolTip": "C:\\Users\\khali\\Documents\\WebServiceProject\\WebServiceProject\\Repository\\user.xml",
+              "RelativeToolTip": "WebServiceProject\\Repository\\user.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2025-02-06T19:18:20.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\khali\\Documents\\WebServiceProject\\WebServiceProject\\Repository\\UserRepository.cs",
+              "RelativeDocumentMoniker": "WebServiceProject\\Repository\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\khali\\Documents\\WebServiceProject\\WebServiceProject\\Repository\\UserRepository.cs",
+              "RelativeToolTip": "WebServiceProject\\Repository\\UserRepository.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAYwDkAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-31T16:02:15.962Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\khali\\Documents\\WebServiceProject\\WebServiceProject\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "WebServiceProject\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\khali\\Documents\\WebServiceProject\\WebServiceProject\\Properties\\launchSettings.json",
+              "RelativeToolTip": "WebServiceProject\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-06T19:45:05.583Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FileEncryption.cs",
+              "DocumentMoniker": "C:\\Users\\khali\\Documents\\WebServiceProject\\WebServiceProject\\FileEncryption.cs",
+              "RelativeDocumentMoniker": "WebServiceProject\\FileEncryption.cs",
+              "ToolTip": "C:\\Users\\khali\\Documents\\WebServiceProject\\WebServiceProject\\FileEncryption.cs",
+              "RelativeToolTip": "WebServiceProject\\FileEncryption.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T19:19:25.175Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "user.bin",
+              "DocumentMoniker": "C:\\Users\\khali\\Documents\\WebServiceProject\\WebServiceProject\\Repository\\user.bin",
+              "RelativeDocumentMoniker": "WebServiceProject\\Repository\\user.bin",
+              "ToolTip": "C:\\Users\\khali\\Documents\\WebServiceProject\\WebServiceProject\\Repository\\user.bin",
+              "RelativeToolTip": "WebServiceProject\\Repository\\user.bin",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-02-06T19:18:18.225Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "curve",
+              "DocumentMoniker": "C:\\Users\\khali\\Documents\\WebServiceProject\\WebServiceProject\\curve",
+              "RelativeDocumentMoniker": "WebServiceProject\\curve",
+              "ToolTip": "C:\\Users\\khali\\Documents\\WebServiceProject\\WebServiceProject\\curve",
+              "RelativeToolTip": "WebServiceProject\\curve",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-31T16:41:55.67Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PasswordEncryption.cs",
+              "DocumentMoniker": "C:\\Users\\khali\\Documents\\WebServiceProject\\WebServiceProject\\Models\\PasswordEncryption.cs",
+              "RelativeDocumentMoniker": "WebServiceProject\\Models\\PasswordEncryption.cs",
+              "ToolTip": "C:\\Users\\khali\\Documents\\WebServiceProject\\WebServiceProject\\Models\\PasswordEncryption.cs",
+              "RelativeToolTip": "WebServiceProject\\Models\\PasswordEncryption.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-31T16:11:29.174Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\khali\\Documents\\WebServiceProject\\WebServiceProject\\Models\\User.cs",
+              "RelativeDocumentMoniker": "WebServiceProject\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\khali\\Documents\\WebServiceProject\\WebServiceProject\\Models\\User.cs",
+              "RelativeToolTip": "WebServiceProject\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-31T16:06:54.598Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "khalil9",
+              "DocumentMoniker": "C:\\Users\\khali\\Documents\\WebServiceProject\\WebServiceProject\\khalil9",
+              "RelativeDocumentMoniker": "WebServiceProject\\khalil9",
+              "ToolTip": "C:\\Users\\khali\\Documents\\WebServiceProject\\WebServiceProject\\khalil9",
+              "RelativeToolTip": "WebServiceProject\\khalil9",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-31T16:23:19.297Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "C:\\Users\\khali\\Documents\\WebServiceProject\\WebServiceProject\\Data\\DataContext.cs",
+              "RelativeDocumentMoniker": "WebServiceProject\\Data\\DataContext.cs",
+              "ToolTip": "C:\\Users\\khali\\Documents\\WebServiceProject\\WebServiceProject\\Data\\DataContext.cs",
+              "RelativeToolTip": "WebServiceProject\\Data\\DataContext.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-31T16:03:17.945Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "user.bin",
+              "DocumentMoniker": "C:\\Users\\khali\\Documents\\WebServiceProject\\WebServiceProject\\user.bin",
+              "RelativeDocumentMoniker": "WebServiceProject\\user.bin",
+              "ToolTip": "C:\\Users\\khali\\Documents\\WebServiceProject\\WebServiceProject\\user.bin",
+              "RelativeToolTip": "WebServiceProject\\user.bin",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-12-30T18:10:52.245Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IBookRepository.cs",
+              "DocumentMoniker": "C:\\Users\\khali\\Documents\\WebServiceProject\\WebServiceProject\\Intefraces\\IBookRepository.cs",
+              "RelativeDocumentMoniker": "WebServiceProject\\Intefraces\\IBookRepository.cs",
+              "ToolTip": "C:\\Users\\khali\\Documents\\WebServiceProject\\WebServiceProject\\Intefraces\\IBookRepository.cs",
+              "RelativeToolTip": "WebServiceProject\\Intefraces\\IBookRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-31T16:02:02.344Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
