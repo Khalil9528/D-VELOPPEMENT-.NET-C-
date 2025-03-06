@@ -8,19 +8,19 @@ namespace WebServiceProject.Data
         public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 
         public DbSet<User> Users { get; set; }
-        public DbSet<Movie> Movies { get; set; }
+        public DbSet<Book> Books { get; set; }
         public DbSet<Review> Reviews { get; set; }
-        public DbSet<Subscription> Subscriptions { get; set; }
+
         public DbSet<Genre> Genres { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Movie - Review (One-to-Many)
-            modelBuilder.Entity<Movie>()
-                .HasMany(m => m.Reviews)
-                .WithOne(r => r.Movie)
-                .HasForeignKey(r => r.MovieId)
-                .OnDelete(DeleteBehavior.Cascade);  // Cascade delete for reviews when a movie is deleted
+            //Book - Review(One - to - Many)
+            modelBuilder.Entity<Book>()
+                .HasMany(b => b.Reviews)
+                .WithOne(r => r.Book)
+                .HasForeignKey(r => r.BookId)
+                .OnDelete(DeleteBehavior.Cascade);  // Cascade delete for reviews when a Book is deleted
 
             // User - Review (One-to-Many)
             modelBuilder.Entity<User>()
@@ -28,16 +28,24 @@ namespace WebServiceProject.Data
                 .WithOne(r => r.Reviewer)
                 .HasForeignKey(r => r.ReviewerId);
 
-            // Movie - Genre (Many-to-Many)
-            modelBuilder.Entity<Movie>()
-                .HasMany(m => m.Genres)
-                .WithMany(g => g.Movies)
-                .UsingEntity(j => j.ToTable("MovieGenres"));  // Customize the join table name
+            // Configure one-to-many relationship between User and Book
+            //modelBuilder.Entity<User>()
+            //    .HasMany(u => u.Borrowed_Books)
+            //    .WithOne(b => b.Borrower)
+            //    .HasForeignKey(b => b.BorrowerId)
+            //    .OnDelete(DeleteBehavior.Restrict);
 
-            // Index on Movie title
-            modelBuilder.Entity<Movie>()
+
+            // Book - Genre (Many-to-Many)
+            modelBuilder.Entity<Book>()
+                .HasMany(b => b.Genres)
+                .WithMany(g => g.Books)
+                .UsingEntity(j => j.ToTable("BookGenres"));  // Customize the join table name
+
+            // Index on Book title
+            modelBuilder.Entity<Book>()
                 .HasIndex(m => m.Title)
-                .IsUnique();  // Enforce unique titles for movies
+                .IsUnique();  // Enforce unique titles for Books
 
             base.OnModelCreating(modelBuilder);
         }

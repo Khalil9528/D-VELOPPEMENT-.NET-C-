@@ -1,5 +1,6 @@
 ﻿namespace WebServiceProject.Models
 {
+    [Serializable]
     public class Review
     {
         public int Id { get; set; }
@@ -13,8 +14,8 @@
         public User Reviewer { get; set; }
         public int ReviewerId { get; set; }
 
-        public int MovieId { get; set; }
-        public Movie Movie { get; set; }
+        public int BookId { get; set; }
+        public Book Book { get; set; }
 
         public Review()
         {

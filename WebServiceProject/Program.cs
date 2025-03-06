@@ -13,20 +13,20 @@ using WebServiceProject.Intefraces;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 1. Ajouter les services de contrôleurs
+// 1. Ajouter les services de contrï¿½leurs
 builder.Services.AddControllers();
 
-// 2. Ajout du service pour le seeding des données (données de test)
+// 2. Ajout du service pour le seeding des donnï¿½es (donnï¿½es de test)
 builder.Services.AddTransient<Seed>();
 
-// 3. Ajout des repositories pour l'injection de dépendances
-builder.Services.AddScoped<IMovieRepository, MovieRepository>();
+// 3. Ajout des repositories pour l'injection de dï¿½pendances
+builder.Services.AddScoped<IBookRepository, BookRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 // 4. Ajouter TokenService pour l'authentification JWT
 builder.Services.AddSingleton<TokenService>();
 
-// 5. Configurer CORS pour autoriser les requêtes depuis des applications externes (comme React en local)
+// 5. Configurer CORS pour autoriser les requï¿½tes depuis des applications externes (comme React en local)
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReactApp",
@@ -59,7 +59,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
-// 7. Ajouter une autorisation générale
+// 7. Ajouter une autorisation gï¿½nï¿½rale
 builder.Services.AddAuthorization();
 
 // 8. Configuration de Swagger pour la documentation de l'API et l'authentification JWT
@@ -96,11 +96,11 @@ builder.Services.AddSwaggerGen(options =>
         }
     });
 
-    // Forcer Swagger à utiliser HTTP
+    // Forcer Swagger ï¿½ utiliser HTTP
     options.AddServer(new OpenApiServer { Url = "http://localhost:5175" });
 });
 
-// 9. Configuration de la base de données avec Entity Framework Core
+// 9. Configuration de la base de donnï¿½es avec Entity Framework Core
 builder.Services.AddDbContext<DataContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
@@ -108,38 +108,39 @@ builder.Services.AddDbContext<DataContext>(options =>
 
 var app = builder.Build();
 
-// 10. Activer CORS pour autoriser les requêtes de l'application React
+// 10. Activer CORS pour autoriser les requï¿½tes de l'application React
 app.UseCors("AllowReactApp");
 
 // 11. Activer l'authentification et l'autorisation dans le pipeline
 app.UseAuthentication();
 app.UseAuthorization();
 
-// 12. Activer le seeding de la base de données si le paramètre "seeddata" est passé en ligne de commande
+// 12. Activer le seeding de la base de donnï¿½es si le paramï¿½tre "seeddata" est passï¿½ en ligne de commande
 if (args.Length == 1 && args[0].ToLower() == "seeddata")
     SeedData(app);
 
 void SeedData(IHost app)
 {
     var scopedFactory = app.Services.GetService<IServiceScopeFactory>();
-    using (var scope = scopedFactory.CreateScope())
+    using (var scope = 
+        scopedFactory.CreateScope())
     {
         var service = scope.ServiceProvider.GetService<Seed>();
         service.SeedDataContext();
     }
 }
 
-// 13. Configurer Swagger dans l'environnement de développement uniquement
+// 13. Configurer Swagger dans l'environnement de dï¿½veloppement uniquement
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-// 14. Rediriger les requêtes HTTP vers HTTPS si nécessaire (commenté ici pour rester en HTTP uniquement)
+// 14. Rediriger les requï¿½tes HTTP vers HTTPS si nï¿½cessaire (commentï¿½ ici pour rester en HTTP uniquement)
 // app.UseHttpsRedirection();
 
-// 15. Ajouter les contrôleurs au pipeline pour gérer les requêtes HTTP vers les routes API
+// 15. Ajouter les contrï¿½leurs au pipeline pour gï¿½rer les requï¿½tes HTTP vers les routes API
 app.MapControllers();
 
 // 16. Lancer l'application

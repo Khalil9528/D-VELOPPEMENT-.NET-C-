@@ -6,11 +6,27 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace WebServiceProject.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class biblio : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Books",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Title = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Text = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ReleaseDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Author = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Books", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "Genres",
                 columns: table => new
@@ -25,23 +41,6 @@ namespace WebServiceProject.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Movies",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Synopsis = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ReleaseDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Director = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PosterUrl = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Movies", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Users",
                 columns: table => new
                 {
@@ -49,33 +48,39 @@ namespace WebServiceProject.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Pseudo = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    UserRole = table.Column<int>(type: "int", nullable: false)
+                    UserRole = table.Column<int>(type: "int", nullable: false),
+                    BookId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Users", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Users_Books_BookId",
+                        column: x => x.BookId,
+                        principalTable: "Books",
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
-                name: "GenreMovie",
+                name: "BookGenres",
                 columns: table => new
                 {
-                    GenresId = table.Column<int>(type: "int", nullable: false),
-                    MoviesId = table.Column<int>(type: "int", nullable: false)
+                    BooksId = table.Column<int>(type: "int", nullable: false),
+                    GenresId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_GenreMovie", x => new { x.GenresId, x.MoviesId });
+                    table.PrimaryKey("PK_BookGenres", x => new { x.BooksId, x.GenresId });
                     table.ForeignKey(
-                        name: "FK_GenreMovie_Genres_GenresId",
-                        column: x => x.GenresId,
-                        principalTable: "Genres",
+                        name: "FK_BookGenres_Books_BooksId",
+                        column: x => x.BooksId,
+                        principalTable: "Books",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_GenreMovie_Movies_MoviesId",
-                        column: x => x.MoviesId,
-                        principalTable: "Movies",
+                        name: "FK_BookGenres_Genres_GenresId",
+                        column: x => x.GenresId,
+                        principalTable: "Genres",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -90,15 +95,15 @@ namespace WebServiceProject.Migrations
                     Text = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Rating = table.Column<double>(type: "float", nullable: false),
                     ReviewerId = table.Column<int>(type: "int", nullable: false),
-                    MovieId = table.Column<int>(type: "int", nullable: false)
+                    BookId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Reviews", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Reviews_Movies_MovieId",
-                        column: x => x.MovieId,
-                        principalTable: "Movies",
+                        name: "FK_Reviews_Books_BookId",
+                        column: x => x.BookId,
+                        principalTable: "Books",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -109,38 +114,21 @@ namespace WebServiceProject.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.CreateTable(
-                name: "Subscriptions",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Type = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    StartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    EndDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    UserId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Subscriptions", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Subscriptions_Users_UserId",
-                        column: x => x.UserId,
-                        principalTable: "Users",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
+            migrationBuilder.CreateIndex(
+                name: "IX_BookGenres_GenresId",
+                table: "BookGenres",
+                column: "GenresId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_GenreMovie_MoviesId",
-                table: "GenreMovie",
-                column: "MoviesId");
+                name: "IX_Books_Title",
+                table: "Books",
+                column: "Title",
+                unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Reviews_MovieId",
+                name: "IX_Reviews_BookId",
                 table: "Reviews",
-                column: "MovieId");
+                column: "BookId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Reviews_ReviewerId",
@@ -148,31 +136,28 @@ namespace WebServiceProject.Migrations
                 column: "ReviewerId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Subscriptions_UserId",
-                table: "Subscriptions",
-                column: "UserId");
+                name: "IX_Users_BookId",
+                table: "Users",
+                column: "BookId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "GenreMovie");
+                name: "BookGenres");
 
             migrationBuilder.DropTable(
                 name: "Reviews");
 
             migrationBuilder.DropTable(
-                name: "Subscriptions");
-
-            migrationBuilder.DropTable(
                 name: "Genres");
 
             migrationBuilder.DropTable(
-                name: "Movies");
+                name: "Users");
 
             migrationBuilder.DropTable(
-                name: "Users");
+                name: "Books");
         }
     }
 }

@@ -1,24 +1,29 @@
 ﻿namespace WebServiceProject.Models
 {
-    public class Movie
+    [Serializable]
+    public class Book
     {
         public int Id { get; set; }
         public string Title { get; set; }
-        public string Synopsis { get; set; }
+        public string Text { get; set; }
         public DateTime ReleaseDate { get; set; }
-        public string Director { get; set; }
+        public string Author { get; set; }
+
+        //public int? BorrowerId { get; set; }
+        //public User Borrower { get; set; }
+
         public ICollection<Genre> Genres { get; set; }
-        public string PosterUrl { get; set; }  // URL de l'affiche du film
 
         // Relation avec les critiques du film
         public ICollection<Review> Reviews { get; set; }
 
-        public Movie()
+        public ICollection<User> Users { get; set; }
+
+        public Book()
         {
             Title = string.Empty;
-            Synopsis = string.Empty;
-            Director = string.Empty;
-            PosterUrl = string.Empty;
+            Text = string.Empty;
+            Author = string.Empty;
         }
 
         // Calcul de la note moyenne à partir des critiques

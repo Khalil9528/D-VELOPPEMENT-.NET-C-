@@ -12,8 +12,8 @@ using WebServiceProject.Data;
 namespace WebServiceProject.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20241029072002_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20241230174046_biblio")]
+    partial class biblio
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,19 +25,50 @@ namespace WebServiceProject.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("GenreMovie", b =>
+            modelBuilder.Entity("BookGenre", b =>
                 {
+                    b.Property<int>("BooksId")
+                        .HasColumnType("int");
+
                     b.Property<int>("GenresId")
                         .HasColumnType("int");
 
-                    b.Property<int>("MoviesId")
+                    b.HasKey("BooksId", "GenresId");
+
+                    b.HasIndex("GenresId");
+
+                    b.ToTable("BookGenres", (string)null);
+                });
+
+            modelBuilder.Entity("WebServiceProject.Models.Book", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.HasKey("GenresId", "MoviesId");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.HasIndex("MoviesId");
+                    b.Property<string>("Author")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.ToTable("GenreMovie");
+                    b.Property<DateTime>("ReleaseDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Title")
+                        .IsUnique();
+
+                    b.ToTable("Books");
                 });
 
             modelBuilder.Entity("WebServiceProject.Models.Genre", b =>
@@ -57,38 +88,6 @@ namespace WebServiceProject.Migrations
                     b.ToTable("Genres");
                 });
 
-            modelBuilder.Entity("WebServiceProject.Models.Movie", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Director")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PosterUrl")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("ReleaseDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Synopsis")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Movies");
-                });
-
             modelBuilder.Entity("WebServiceProject.Models.Review", b =>
                 {
                     b.Property<int>("Id")
@@ -97,7 +96,7 @@ namespace WebServiceProject.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("MovieId")
+                    b.Property<int>("BookId")
                         .HasColumnType("int");
 
                     b.Property<double>("Rating")
@@ -116,42 +115,11 @@ namespace WebServiceProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("MovieId");
+                    b.HasIndex("BookId");
 
                     b.HasIndex("ReviewerId");
 
                     b.ToTable("Reviews");
-                });
-
-            modelBuilder.Entity("WebServiceProject.Models.Subscription", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("EndDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<DateTime>("StartDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Subscriptions");
                 });
 
             modelBuilder.Entity("WebServiceProject.Models.User", b =>
@@ -161,6 +129,9 @@ namespace WebServiceProject.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("BookId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Password")
                         .IsRequired()
@@ -175,29 +146,31 @@ namespace WebServiceProject.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("BookId");
+
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("GenreMovie", b =>
+            modelBuilder.Entity("BookGenre", b =>
                 {
-                    b.HasOne("WebServiceProject.Models.Genre", null)
+                    b.HasOne("WebServiceProject.Models.Book", null)
                         .WithMany()
-                        .HasForeignKey("GenresId")
+                        .HasForeignKey("BooksId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("WebServiceProject.Models.Movie", null)
+                    b.HasOne("WebServiceProject.Models.Genre", null)
                         .WithMany()
-                        .HasForeignKey("MoviesId")
+                        .HasForeignKey("GenresId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
             modelBuilder.Entity("WebServiceProject.Models.Review", b =>
                 {
-                    b.HasOne("WebServiceProject.Models.Movie", "Movie")
+                    b.HasOne("WebServiceProject.Models.Book", "Book")
                         .WithMany("Reviews")
-                        .HasForeignKey("MovieId")
+                        .HasForeignKey("BookId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -207,25 +180,23 @@ namespace WebServiceProject.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Movie");
+                    b.Navigation("Book");
 
                     b.Navigation("Reviewer");
                 });
 
-            modelBuilder.Entity("WebServiceProject.Models.Subscription", b =>
+            modelBuilder.Entity("WebServiceProject.Models.User", b =>
                 {
-                    b.HasOne("WebServiceProject.Models.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
+                    b.HasOne("WebServiceProject.Models.Book", null)
+                        .WithMany("Users")
+                        .HasForeignKey("BookId");
                 });
 
-            modelBuilder.Entity("WebServiceProject.Models.Movie", b =>
+            modelBuilder.Entity("WebServiceProject.Models.Book", b =>
                 {
                     b.Navigation("Reviews");
+
+                    b.Navigation("Users");
                 });
 
             modelBuilder.Entity("WebServiceProject.Models.User", b =>

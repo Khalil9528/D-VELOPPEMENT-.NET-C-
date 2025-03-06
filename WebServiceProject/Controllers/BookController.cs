@@ -10,59 +10,60 @@ namespace WebServiceProject.Controllers
     [Route("api/[controller]")]
     [Authorize]
     [ApiController]
-    public class MovieController : Controller
+    public class BookController : Controller
     {
-        private readonly IMovieRepository _movieRepository;
+        private readonly IBookRepository _BookRepository;
         private readonly DataContext _context;
-        public MovieController(IMovieRepository movieRepository, DataContext context)
+        public BookController(IBookRepository BookRepository, DataContext context)
         {
-            _movieRepository = movieRepository;
+            _BookRepository = BookRepository;
             _context = context;
         }
 
         [HttpGet]
-        [ProducesResponseType(200, Type = typeof(IEnumerable<Movie>))]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<Book>))]
 
-        public IActionResult GetMovies()
+        public IActionResult GetBooks()
         {
-            var movies = _movieRepository.GetMovies();
+            var Books = _BookRepository.GetBooks();
 
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            return Ok(movies);
+            return Ok(Books);
         }
         /*
-        [HttpGet("{movieId}")]
-        [ProducesResponseType(200, Type = typeof(Movie))]
+        [HttpGet("{BookId}")]
+        [ProducesResponseType(200, Type = typeof(Book))]
         [ProducesResponseType(400)]
 
-        public IActionResult GetMovie(int id)
+        public IActionResult GetBook(int id)
         {
-            var movie = _movieRepository.GetMovieById(id);
+            var Book = _BookRepository.GetBookById(id);
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            return Ok(movie);
+            return Ok(Book);
         }
         */
-        [HttpGet("{movieTitle}")]
-        [ProducesResponseType(200, Type = typeof(Movie))]
+        [HttpGet("{BookTitle}")]
+        [ProducesResponseType(200, Type = typeof(Book))]
         [ProducesResponseType(400)]
 
-        public IActionResult GetMoGetMovieByTitle(string movieTitle)
+        public IActionResult GetMoGetBookByTitle(string BookTitle)
         {
-            var movie = _movieRepository.GetMovieByTitle(movieTitle);
+            var Book = _BookRepository.GetBookByTitle(BookTitle);
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            return Ok(movie);
+            return Ok(Book);
 
         }
+        
 
      
     }
