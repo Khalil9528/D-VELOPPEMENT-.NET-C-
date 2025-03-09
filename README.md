@@ -24,7 +24,4 @@ Ce projet est une **application console** en **C#** permettant de gérer une bib
 - **Gestion des fichiers :** `System.IO`
 - **Architecture :** Séparation en plusieurs projets (Console, Data, Serialization)
 
-## 🎮 Utilisation
-1️⃣ **Lancer l'application**  
-```sh
-dotnet run --project BibliothequeConsole
+
